@@ -51,7 +51,7 @@ const procedures = [
       "Preserves the cornea",
       "Removable if needed",
     ],
-    image: "/services/laser-vision-correction/icl-line-art1.png",
+    image: "/services/laser-vision-correction/ICL-line-artV1.png",
   },
 ];
 
@@ -93,13 +93,11 @@ export default function Procedures() {
                 {/* Image */}
 
                 <div className="flex justify-center">
-                  <Image
-                    src={procedure.image}
-                    alt={procedure.title}
-                    width={650}
-                    height={650}
-                    className="w-full max-w-lg transition-transform duration-500 hover:scale-105"
-                  />
+                  <img
+  src={procedure.image}
+  alt={procedure.title}
+  className="w-full max-w-lg transition-transform duration-500 hover:scale-105"
+/>
                 </div>
 
                 {/* Text */}
