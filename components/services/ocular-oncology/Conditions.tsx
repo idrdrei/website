@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -9,6 +10,7 @@ const conditions = [
     title: "Choroidal Melanoma",
     description:
       "The most common primary eye cancer in adults, requiring specialized diagnosis and individualized treatment.",
+    href: "/education/choroidal-melanoma",
   },
   {
     title: "Retinoblastoma",
@@ -62,8 +64,8 @@ export default function Conditions() {
         />
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {conditions.map((condition, index) => (
-            <FadeIn key={condition.title} delay={index * 0.05}>
+          {conditions.map((condition, index) => {
+            const Card = (
               <div className="group h-full rounded-[32px] border border-neutral-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-[#1F4E8C]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.08)]">
                 <div className="h-1 w-12 rounded-full bg-[#1F4E8C] transition-all duration-500 group-hover:w-20" />
 
@@ -75,8 +77,20 @@ export default function Conditions() {
                   {condition.description}
                 </p>
               </div>
-            </FadeIn>
-          ))}
+            );
+
+            return (
+              <FadeIn key={condition.title} delay={index * 0.05}>
+                {condition.href ? (
+                  <Link href={condition.href} className="block h-full">
+                    {Card}
+                  </Link>
+                ) : (
+                  Card
+                )}
+              </FadeIn>
+            );
+          })}
         </div>
       </div>
     </Section>
