@@ -51,7 +51,7 @@ const procedures = [
       "Preserves the cornea",
       "Removable if needed",
     ],
-    image: "/services/laser-vision-correction/ICL-line-artV1.png",
+    image: "/services/laser-vision-correction/icl-line-art.png",
   },
 ];
 
