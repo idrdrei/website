@@ -75,7 +75,7 @@ export default function ChoroidalMelanomaPage() {
       <p className="mt-6 leading-8 text-neutral-700">
         Although uncommon, it is the{" "}
         <strong>most common eye cancer that begins inside the eye in adults.</strong>
-        Many people have no symptoms when it is first discovered, which is why
+         Many people have no symptoms when it is first discovered, which is why
         it is often detected during a routine dilated eye examination.
       </p>
 

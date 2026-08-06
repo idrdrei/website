@@ -59,7 +59,7 @@ export default function WhyChoose() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block rounded-[36px] border border-gray-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
+                  className="group flex min-h-[240px] flex-col justify-between rounded-[36px] border border-gray-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
                 >
                   <div className="flex items-start justify-between">
                     <p className="text-4xl font-light tracking-[-0.03em] text-[#111]">
@@ -72,17 +72,18 @@ export default function WhyChoose() {
                     />
                   </div>
 
-                  <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500">
-                    {item.label}
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-neutral-500 sm:text-sm sm:tracking-[0.25em]">
+                    <span className="block">Fellowship</span>
+                    <span className="block">Trained</span>
                   </p>
                 </a>
               ) : (
-                <div className="rounded-[36px] border border-gray-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                <div className="flex min-h-[240px] flex-col justify-between rounded-[36px] border border-gray-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
                   <p className="text-4xl font-light tracking-[-0.03em] text-[#111]">
                     {item.value}
                   </p>
 
-                  <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500">
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-neutral-500 sm:text-sm sm:tracking-[0.25em]">
                     {item.label}
                   </p>
                 </div>
