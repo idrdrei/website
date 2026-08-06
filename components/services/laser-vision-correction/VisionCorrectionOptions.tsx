@@ -44,7 +44,7 @@ const options = [
       "An implantable lens option for patients with higher prescriptions or those unsuitable for laser correction.",
     highlights: ["Higher prescriptions", "Removable lens"],
     icon: CircleDot,
-    image: "/services/laser-vision-correction/ICL-line-artV1.png",
+    image: "/services/laser-vision-correction/icl-line-art.png",
   },
 ];
 
