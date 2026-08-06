@@ -73,11 +73,13 @@ export default function ChoroidalMelanomaPage() {
       </p>
 
       <p className="mt-6 leading-8 text-neutral-700">
-        Although uncommon, it is the{" "}
-        <strong>most common eye cancer that begins inside the eye in adults.</strong>
-         Many people have no symptoms when it is first discovered, which is why
-        it is often detected during a routine dilated eye examination.
-      </p>
+  Although uncommon, it is the{" "}
+  <strong>
+    most common eye cancer that begins inside the eye in adults.
+  </strong>{" "}
+  Many people have no symptoms when it is first discovered, which is why it is
+  often detected during a routine dilated eye examination.
+</p>
 
       <div className="mt-8 rounded-[24px] bg-[#1F4E8C]/5 p-6">
 
