@@ -45,7 +45,7 @@ export default function CallToAction({
           <div className="mt-14 flex flex-col items-center justify-center gap-6 sm:flex-row">
             {/* Messenger */}
             <a
-              href="https://www.facebook.com/idrdrei"
+              href="https://m.me/idrdrei"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-base font-medium text-[#1F4E8C] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-[#0084FF] hover:text-white"
