@@ -28,7 +28,10 @@ export default function CallToAction({
     "Whether you're considering LASIK, cataract surgery, evaluation for an eye tumor, or a comprehensive eye examination, we're here to help you see your best.",
 }: CallToActionProps) {
   return (
-    <section className="bg-[#1F4E8C] py-28 text-white">
+    <section
+      id="contact"
+      className="scroll-mt-24 bg-[#1F4E8C] py-28 text-white"
+    >
       <div className="mx-auto max-w-7xl px-8 text-center lg:px-16">
         <FadeIn>
           <p className="text-sm font-medium uppercase tracking-[0.35em] text-white/70">
@@ -76,13 +79,19 @@ export default function CallToAction({
             </a>
 
             {/* Viber */}
-            <a
-              href="viber://chat?number=%2B639058616824"
-              className="inline-flex items-center gap-3 rounded-full border border-white/25 px-8 py-4 text-base font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#7360F2] hover:bg-[#7360F2]"
-            >
-              <FaViber size={20} />
-              <span>Viber</span>
-            </a>
+            <div className="group relative inline-block">
+  <a
+    href="viber://chat?number=%2B639058616824"
+    className="inline-flex items-center gap-3 rounded-full border border-white/25 px-8 py-4 text-base font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#7360F2] hover:bg-[#7360F2]"
+  >
+    <FaViber size={20} />
+    <span>Viber</span>
+  </a>
+
+  <div className="pointer-events-none absolute bottom-full left-1/2 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg bg-neutral-900 px-3 py-2 text-xs text-white opacity-0 shadow-lg transition-all duration-200 group-hover:opacity-100">
+    Contact my secretary, L.S.
+  </div>
+</div>
           </div>
         </FadeIn>
       </div>

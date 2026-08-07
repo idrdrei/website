@@ -53,8 +53,7 @@ export default function Clinics() {
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8">
 
-                  <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-md border border-white/15">
-
+<div className="rounded-2xl border border-white/10 bg-black/40 p-6 transition-colors duration-300 group-hover:bg-black/50">
                     <MapPin
                       size={28}
                       className="mb-5 text-white transition-transform duration-500 group-hover:scale-110"
