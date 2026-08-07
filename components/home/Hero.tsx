@@ -5,15 +5,18 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-8 pt-36 pb-24 lg:flex-row lg:px-16">
+    <section className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-8 pb-20 pt-32 lg:flex-row lg:gap-20 lg:px-16 lg:pb-28 lg:pt-40">
       {/* Left */}
       <div className="flex-1 text-center lg:text-left">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#1F4E8C] sm:text-sm sm:tracking-[0.35em]">
-  Ocular Oncology • Cataract
-  <br className="sm:hidden" />
-  <span className="sm:hidden">Laser Vision Correction</span>
-  <span className="hidden sm:inline"> • Laser Vision Correction</span>
-</p>
+        <p className="text-xs font-medium tracking-[0.08em] text-[#1F4E8C] sm:text-sm sm:uppercase sm:tracking-[0.35em]">
+          Ocular Oncology • Cataract
+          <br className="sm:hidden" />
+          <span className="sm:hidden">Laser Vision Correction</span>
+          <span className="hidden sm:inline">
+            {" "}
+            • Laser Vision Correction
+          </span>
+        </p>
 
         <h1 className="mt-6 text-4xl font-light leading-[0.9] tracking-[-0.06em] text-[#111] sm:text-6xl md:text-7xl lg:text-8xl">
           Specialized
@@ -21,7 +24,7 @@ export default function Hero() {
           Eye Care.
         </h1>
 
-        <div className="mt-8 max-w-xl text-lg leading-8 text-neutral-600">
+        <div className="mt-8 max-w-xl text-lg leading-8 text-neutral-600 lg:mx-0 mx-auto">
           <p>
             Expert care for everything from routine eye examinations to highly
             specialized eye conditions, delivered through evidence-based
@@ -30,7 +33,7 @@ export default function Hero() {
         </div>
 
         {/* Credentials */}
-        <div className="mt-10 border-l-2 border-[#1F4E8C] pl-5">
+        <div className="mt-10 border-l-2 border-[#1F4E8C] pl-5 text-left">
           <h2 className="text-xl font-medium text-[#111]">
             Dr. Andrei Martin
           </h2>
@@ -93,7 +96,7 @@ export default function Hero() {
       </div>
 
       {/* Right */}
-      <div className="flex flex-1 items-center justify-center lg:justify-end">
+      <div className="mt-8 flex flex-1 items-center justify-center lg:mt-0 lg:justify-end">
         <div className="overflow-hidden rounded-[36px] ring-1 ring-black/5 shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
           <Image
             src="/images/hero/andrei-hero.jpg"
@@ -101,7 +104,7 @@ export default function Hero() {
             width={700}
             height={900}
             priority
-            className="w-[280px] object-cover transition-transform duration-700 hover:scale-[1.02] sm:w-[340px] md:w-[400px] lg:h-[74vh] lg:w-auto"
+            className="w-[250px] object-cover transition-transform duration-700 hover:scale-[1.02] sm:w-[340px] md:w-[400px] lg:h-[74vh] lg:w-auto"
           />
         </div>
       </div>
