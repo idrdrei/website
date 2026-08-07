@@ -1,20 +1,21 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section
-      id="about"
-      className="scroll-mt-24 mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl flex-col-reverse items-center justify-center gap-12 px-8 py-8 lg:flex-row lg:gap-20 lg:px-16 lg:py-12"
-    >
+    <section className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-8 pt-36 pb-24 lg:flex-row lg:px-16">
       {/* Left */}
       <div className="flex-1 text-center lg:text-left">
-        <p className="mb-6 text-sm font-medium uppercase tracking-[0.35em] text-[#1F4E8C]">
-          Ocular Oncology • Cataract • Laser Vision
-        </p>
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#1F4E8C] sm:text-sm sm:tracking-[0.35em]">
+  Ocular Oncology • Cataract
+  <br className="sm:hidden" />
+  <span className="sm:hidden">Laser Vision Correction</span>
+  <span className="hidden sm:inline"> • Laser Vision Correction</span>
+</p>
 
-        <h1 className="text-4xl font-light leading-[0.9] tracking-[-0.06em] text-[#111] sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="mt-6 text-4xl font-light leading-[0.9] tracking-[-0.06em] text-[#111] sm:text-6xl md:text-7xl lg:text-8xl">
           Specialized
           <br />
           Eye Care.
@@ -66,15 +67,15 @@ export default function Hero() {
         <div className="mt-12">
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
             <button
-  onClick={() => {
-    document
-      .getElementById("contact")
-      ?.scrollIntoView({ behavior: "smooth" });
-  }}
-  className="rounded-full bg-[#1F4E8C] px-8 py-4 text-center font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#163E70] hover:shadow-lg"
->
-  Request Appointment
-</button>
+              onClick={() => {
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="rounded-full bg-[#1F4E8C] px-8 py-4 text-center font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#163E70] hover:shadow-lg"
+            >
+              Request Appointment
+            </button>
 
             <Link
               href="/education"
@@ -100,7 +101,7 @@ export default function Hero() {
             width={700}
             height={900}
             priority
-            className="w-[280px] sm:w-[340px] md:w-[400px] lg:h-[74vh] lg:w-auto object-cover transition-transform duration-700 hover:scale-[1.02]"
+            className="w-[280px] object-cover transition-transform duration-700 hover:scale-[1.02] sm:w-[340px] md:w-[400px] lg:h-[74vh] lg:w-auto"
           />
         </div>
       </div>
