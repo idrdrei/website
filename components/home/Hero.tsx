@@ -64,12 +64,16 @@ export default function Hero() {
         {/* Actions */}
         <div className="mt-12">
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-            <Link
-              href="/#contact"
-              className="rounded-full bg-[#1F4E8C] px-8 py-4 text-center font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#163E70] hover:shadow-lg"
-            >
-              Book Appointment
-            </Link>
+            <button
+  onClick={() => {
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="rounded-full bg-[#1F4E8C] px-8 py-4 text-center font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#163E70] hover:shadow-lg"
+>
+  Request Appointment
+</button>
 
             <Link
               href="/education"

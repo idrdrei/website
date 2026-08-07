@@ -1,20 +1,24 @@
 "use client";
 
 import FadeIn from "@/components/FadeIn";
+import Image from "next/image";
 import { MapPin, Clock } from "lucide-react";
 
 const clinics = [
   {
     name: "St. Luke's Medical Center – Quezon City",
     schedule: "Mondays & Wednesdays • 8:30–11:00 AM",
+    image: "/clinics/stlukes-qc.png",
   },
   {
     name: "Makati Life Medical Center",
     schedule: "Fridays • 9:00 AM–1:00 PM",
+    image: "/clinics/makati-life.png",
   },
   {
     name: "Fatima University Medical Center – Antipolo",
     schedule: "Mondays • 1:00–3:00 PM",
+    image: "/clinics/fatima-antipolo.png",
   },
 ];
 
@@ -25,10 +29,7 @@ export default function Clinics() {
         <FadeIn>
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="text-4xl font-light tracking-tight text-neutral-900 md:text-5xl">
-              Choose Your
-              <span className="block font-semibold">
-                Preferred Clinic
-              </span>
+              <span className="font-semibold">Available Locations</span>
             </h2>
           </div>
         </FadeIn>
@@ -36,25 +37,46 @@ export default function Clinics() {
         <div className="grid gap-8 lg:grid-cols-3">
           {clinics.map((clinic, index) => (
             <FadeIn key={clinic.name} delay={index * 0.1}>
-              <div className="group rounded-[32px] border border-neutral-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#1F4E8C]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.08)]">
-                
-                <MapPin
-                  size={30}
-                  className="mb-6 text-[#1F4E8C] transition-transform duration-500 group-hover:scale-110"
+              <div className="group relative h-[420px] overflow-hidden rounded-[32px] shadow-[0_24px_60px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.18)]">
+
+                {/* Background Image */}
+                <Image
+                  src={clinic.image}
+                  alt={clinic.name}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                <h3 className="text-2xl font-semibold text-neutral-900 transition-colors duration-300 group-hover:text-[#1F4E8C]">
-                  {clinic.name}
-                </h3>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10" />
 
-                <div className="mt-6 flex items-center gap-3 text-neutral-600">
-                  <Clock
-                    size={18}
-                    className="transition-transform duration-500 group-hover:rotate-6"
-                  />
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-8">
 
-                  <span>{clinic.schedule}</span>
+                  <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-md border border-white/15">
+
+                    <MapPin
+                      size={28}
+                      className="mb-5 text-white transition-transform duration-500 group-hover:scale-110"
+                    />
+
+                    <h3 className="text-2xl font-semibold leading-tight text-white">
+                      {clinic.name}
+                    </h3>
+
+                    <div className="mt-5 flex items-center gap-3 text-white/90">
+                      <Clock
+                        size={18}
+                        className="transition-transform duration-500 group-hover:rotate-6"
+                      />
+
+                      <span>{clinic.schedule}</span>
+                    </div>
+
+                  </div>
+
                 </div>
+
               </div>
             </FadeIn>
           ))}
