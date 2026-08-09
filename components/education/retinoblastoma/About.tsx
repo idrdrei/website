@@ -11,18 +11,18 @@ export default function About() {
     >
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-8 lg:grid-cols-2 lg:px-16">
 
-        {/* Left */}
-        <FadeIn>
-          <div className="overflow-hidden rounded-[32px] border border-neutral-200 bg-neutral-50 shadow-sm">
-            <Image
-              src="/education/retinoblastoma/retinoblastoma-fundus1.jpg"
-              alt="Illustration of retinoblastoma inside the eye"
-              width={900}
-              height={900}
-              className="w-full object-cover"
-            />
-          </div>
-        </FadeIn>
+       {/* Left */}
+<FadeIn>
+  <div className="overflow-hidden rounded-[32px] border border-neutral-200 bg-neutral-50 shadow-sm lg:-mt-6">
+    <Image
+      src="/education/retinoblastoma/retinoblastoma-fundus1.jpg"
+      alt="Fundus photograph showing retinoblastoma"
+      width={1000}
+      height={1000}
+      className="h-[340px] w-full object-cover md:h-[420px] lg:h-[500px]"
+    />
+  </div>
+</FadeIn>
 
         {/* Right */}
         <FadeIn delay={0.15}>
@@ -32,10 +32,10 @@ export default function About() {
             </p>
 
             <h2 className="mt-6 text-4xl font-light leading-tight tracking-[-0.04em] text-[#111] sm:text-5xl">
-              Early detection can save
-              <br />
-              life and vision.
-            </h2>
+  Early detection can save
+  <br />
+  lives and vision.
+</h2>
 
             <p className="mt-8 text-lg leading-8 text-neutral-600">
               Retinoblastoma is a rare type of eye cancer that starts in the{" "}
