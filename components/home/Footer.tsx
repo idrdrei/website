@@ -131,7 +131,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://facebook.com/idrdrei"
+                href="https://m.me/idrdrei"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Messenger"
