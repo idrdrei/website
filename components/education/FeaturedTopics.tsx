@@ -24,27 +24,39 @@ const topics = [
     badge: "New Guide",
   },
   {
-    title: "Cataracts",
+    title: "Understanding Retinoblastoma",
     description:
-      "Learn about symptoms, surgery, premium intraocular lenses, recovery, and frequently asked questions.",
+      "A parent-friendly guide explaining retinoblastoma, warning signs, diagnosis, modern treatments, genetics, and long-term follow-up.",
     hover:
-      "A cataract is the clouding of the eye's natural lens that gradually causes blurred vision, glare, and difficulty with everyday activities. Modern cataract surgery restores clear vision by replacing the cloudy lens with a clear artificial lens.",
-    icon: Glasses,
+      "Learn how early diagnosis can save a child's life, preserve the eye, and maximize vision. Includes illustrations, treatment explanations, and answers to common questions for parents.",
+    icon: Baby,
+    href: "/education/retinoblastoma",
+    badge: "New Guide",
   },
+ {
+  title: "Cataracts",
+  description:
+    "Learn about symptoms, surgery, premium intraocular lenses, recovery, and frequently asked questions.",
+  hover:
+    "A cataract is the clouding of the eye's natural lens that gradually causes blurred vision, glare, and difficulty with everyday activities. Modern cataract surgery restores clear vision by replacing the cloudy lens with a clear artificial lens.",
+  icon: Glasses,
+  href: "/services/cataract-surgery",
+},
   {
-    title: "Vision Correction",
-    description:
-      "Explore LASIK, SMILE Pro, PRK, candidacy, recovery, and life after laser vision correction.",
-    hover:
-      "Laser vision correction reshapes the cornea to reduce or eliminate dependence on glasses and contact lenses. Not everyone is a candidate, making a comprehensive evaluation essential.",
-    icon: ScanEye,
-  },
+  title: "Vision Correction",
+  description:
+    "Explore LASIK, SMILE Pro, PRK, candidacy, recovery, and life after laser vision correction.",
+  hover:
+    "Laser vision correction reshapes the cornea to reduce or eliminate dependence on glasses and contact lenses. Not everyone is a candidate, making a comprehensive evaluation essential.",
+  icon: ScanEye,
+  href: "/services/laser-vision-correction",
+},
   {
     title: "Eye Tumors",
     description:
-      "Patient-friendly guides on conjunctival tumors, retinoblastoma, choroidal melanoma, and ocular oncology.",
+      "Learn about conjunctival tumors, orbital tumors, eyelid tumors, ocular metastasis, and other ocular oncology conditions.",
     hover:
-      "Eye tumors may involve the eyelids, conjunctiva, retina, orbit, or structures inside the eye. Early diagnosis often improves treatment options while helping preserve both vision and eye health.",
+      "Explore patient-friendly information about tumors affecting the eyelids, conjunctiva, orbit, and other structures around the eye, with a focus on early diagnosis and specialized care.",
     icon: ShieldCheck,
   },
   {
@@ -58,19 +70,20 @@ const topics = [
   {
     title: "Children's Eye Health",
     description:
-      "Vision development, childhood eye conditions, retinoblastoma, and pediatric eye examinations.",
+      "Vision development, childhood eye conditions, amblyopia, refractive errors, and pediatric eye examinations.",
     hover:
       "Children's eyes develop rapidly during the early years. Routine examinations can identify problems early, supporting healthy visual development and learning.",
     icon: Baby,
   },
   {
-    title: "Everyday Eye Care",
-    description:
-      "Dry eye, glaucoma screening, computer vision syndrome, routine eye care, and protecting your sight.",
-    hover:
-      "Simple habits such as regular eye examinations, UV protection, and early treatment of common eye conditions play an important role in preserving lifelong vision.",
-    icon: Monitor,
-  },
+  title: "Everyday Eye Care",
+  description:
+    "Dry eye, glaucoma screening, computer vision syndrome, routine eye care, and protecting your sight.",
+  hover:
+    "Simple habits such as regular eye examinations, UV protection, and early treatment of common eye conditions play an important role in preserving lifelong vision.",
+  icon: Monitor,
+  href: "/services/comprehensive-eye-care",
+},
 ];
 
 export default function FeaturedTopics() {
@@ -133,18 +146,25 @@ export default function FeaturedTopics() {
                 <div className="mt-6 h-px w-12 bg-neutral-200 transition-all duration-500 md:group-hover:w-20 md:group-hover:bg-[#1F4E8C]/30" />
 
                 <div className="overflow-hidden">
-                  <p
-                    className="
-                      mt-5 max-h-40 pt-1 text-sm leading-7 text-[#1F4E8C] opacity-100
-                      md:mt-0 md:max-h-0 md:pt-0 md:opacity-0
-                      md:transition-all md:duration-500 md:ease-out
-                      md:group-hover:mt-6 md:group-hover:max-h-40
-                      md:group-hover:pt-1 md:group-hover:opacity-100
-                    "
-                  >
-                    {topic.hover}
-                  </p>
-                </div>
+  <p
+    className="
+      mt-5 max-h-40 pt-1 text-sm leading-7 text-[#1F4E8C] opacity-100
+      md:mt-0 md:max-h-0 md:pt-0 md:opacity-0
+      md:transition-all md:duration-500 md:ease-out
+      md:group-hover:mt-6 md:group-hover:max-h-40
+      md:group-hover:pt-1 md:group-hover:opacity-100
+    "
+  >
+    {topic.hover}
+  </p>
+</div>
+
+{topic.href && (
+  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-[#1F4E8C] transition-all duration-300 group-hover:gap-3">
+    <span>Learn More</span>
+    <span aria-hidden="true">→</span>
+  </div>
+)}
 
               </div>
             );

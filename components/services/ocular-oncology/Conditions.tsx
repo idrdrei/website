@@ -12,11 +12,12 @@ const conditions = [
       "The most common primary eye cancer in adults, requiring specialized diagnosis and individualized treatment.",
     href: "/education/choroidal-melanoma",
   },
-  {
-    title: "Retinoblastoma",
-    description:
-      "A rare childhood eye cancer where early diagnosis is essential to preserve life, the eye, and vision.",
-  },
+ {
+  title: "Retinoblastoma",
+  description:
+    "A rare childhood eye cancer where early diagnosis is essential to preserve life, the eye, and vision.",
+  href: "/education/retinoblastoma",
+},
   {
     title: "Ocular Surface Tumors",
     description:
@@ -65,19 +66,28 @@ export default function Conditions() {
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {conditions.map((condition, index) => {
-            const Card = (
-              <div className="group h-full rounded-[32px] border border-neutral-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-[#1F4E8C]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.08)]">
-                <div className="h-1 w-12 rounded-full bg-[#1F4E8C] transition-all duration-500 group-hover:w-20" />
+           const Card = (
+  <div className="group flex h-full flex-col rounded-[32px] border border-neutral-200 bg-[#FAFAF7] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-[#1F4E8C]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.08)]">
+    <div className="h-1 w-12 rounded-full bg-[#1F4E8C] transition-all duration-500 group-hover:w-20" />
 
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight text-[#111]">
-                  {condition.title}
-                </h3>
+    <h3 className="mt-8 text-2xl font-semibold tracking-tight text-[#111]">
+      {condition.title}
+    </h3>
 
-                <p className="mt-5 leading-8 text-neutral-600">
-                  {condition.description}
-                </p>
-              </div>
-            );
+    <p className="mt-5 leading-8 text-neutral-600">
+      {condition.description}
+    </p>
+
+    {condition.href && (
+      <div className="mt-auto pt-8">
+        <span className="inline-flex items-center gap-2 font-medium text-[#1F4E8C] transition-all duration-300 group-hover:gap-3">
+          Learn More
+          <span aria-hidden="true">→</span>
+        </span>
+      </div>
+    )}
+  </div>
+);
 
             return (
               <FadeIn key={condition.title} delay={index * 0.05}>

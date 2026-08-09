@@ -5,21 +5,22 @@ import { ChevronRight } from "lucide-react";
 
 type BreadcrumbsProps = {
   current: string;
+  parent?: string;
+  parentHref?: string;
 };
 
 export default function Breadcrumbs({
   current,
+  parent = "Services",
+  parentHref = "/services",
 }: BreadcrumbsProps) {
   return (
-    <nav
-      aria-label="Breadcrumb"
-      className="mb-10 flex items-center justify-center text-sm text-neutral-500"
-    >
+    <nav className="flex items-center text-sm text-neutral-500">
       <Link
-        href="/services"
-        className="transition-colors hover:text-[#1F4E8C]"
+        href={parentHref}
+        className="transition hover:text-[#1F4E8C]"
       >
-        Services
+        {parent}
       </Link>
 
       <ChevronRight
