@@ -15,12 +15,12 @@ export default function About() {
 <FadeIn>
   <div className="overflow-hidden rounded-[32px] border border-neutral-200 bg-neutral-50 shadow-sm lg:-mt-6">
     <Image
-      src="/education/retinoblastoma/retinoblastoma-fundus1.jpg"
-      alt="Fundus photograph showing retinoblastoma"
-      width={1000}
-      height={1000}
-      className="h-[340px] w-full object-cover md:h-[420px] lg:h-[500px]"
-    />
+  src="/education/retinoblastoma/retinoblastoma-fundus1.jpg"
+  alt="Fundus photograph showing retinoblastoma"
+  width={1000}
+  height={1000}
+  className="w-full object-contain bg-neutral-50"
+/>
   </div>
 </FadeIn>
 
