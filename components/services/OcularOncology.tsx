@@ -6,18 +6,33 @@ import FadeIn from "@/components/FadeIn";
 import { ArrowRight } from "lucide-react";
 
 const services = [
-  "Choroidal melanoma",
-  "Retinoblastoma",
-  "Conjunctival tumors",
-  "Orbital tumors",
-  "Eyelid tumors",
-  "Second opinions and multidisciplinary care",
+  {
+    label: "Choroidal melanoma",
+    href: "/education/choroidal-melanoma",
+  },
+  {
+    label: "Retinoblastoma",
+    href: "/education/retinoblastoma",
+  },
+  {
+    label: "Conjunctival tumors",
+  },
+  {
+    label: "Orbital tumors",
+  },
+  {
+    label: "Eyelid tumors",
+  },
+  {
+    label: "Second opinions and multidisciplinary care",
+  },
 ];
 
 export default function OcularOncology() {
   return (
-    <section className="bg-[#0F172A] py-24 lg:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-20 px-6 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-16">
+    <section className="bg-[#0F172A] py-24 text-white">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-8 lg:grid-cols-2 lg:px-16">
+
         {/* Content */}
         <FadeIn>
           <div>
@@ -41,11 +56,21 @@ export default function OcularOncology() {
             <ul className="mt-10 space-y-4">
               {services.map((item) => (
                 <li
-                  key={item}
+                  key={item.label}
                   className="flex items-center gap-3 text-slate-200"
                 >
                   <span className="h-2 w-2 rounded-full bg-[#7FB3FF]" />
-                  {item}
+
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className="transition-colors duration-300 hover:text-white hover:underline"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span>{item.label}</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -76,6 +101,7 @@ export default function OcularOncology() {
             />
           </div>
         </FadeIn>
+
       </div>
     </section>
   );
