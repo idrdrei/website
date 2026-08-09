@@ -26,15 +26,18 @@ export default function Hero() {
             lifestyle, and visual goals.
           </p>
 
-          <div className="mx-auto mt-10 inline-flex items-center rounded-full border border-[#1F4E8C]/10 bg-[#F8FAFC] px-6 py-3 text-sm text-neutral-700 shadow-sm">
-            <span className="font-semibold text-[#1F4E8C]">
-              Member,
-            </span>
+          <div className="mx-auto mt-10 inline-flex flex-col items-center rounded-[24px] border border-[#1F4E8C]/10 bg-[#F8FAFC] px-8 py-5 text-center shadow-sm">
+  <p className="text-lg font-semibold text-neutral-900">
+    Dr. Andrei Martin
+  </p>
 
-            <span className="ml-2">
-              Refractive Surgery Society of the Philippines
-            </span>
-          </div>
+  <p className="mt-2 text-sm text-neutral-600">
+    <span className="font-semibold text-[#1F4E8C]">
+      Member
+    </span>{" "}
+    • Refractive Surgery Society of the Philippines
+  </p>
+</div>
         </FadeIn>
       </div>
     </section>
