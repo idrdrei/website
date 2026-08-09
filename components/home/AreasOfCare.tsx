@@ -26,7 +26,7 @@ const services = [
   {
     title: "Comprehensive Eye Care",
     description:
-      "Evaluation and management of common and complex eye conditions with personalized, evidence-based care.",
+      "Evaluation and personalized management of common and complex eye conditions.",
     href: "/services/comprehensive-eye-care",
   },
 ];
@@ -47,7 +47,7 @@ export default function AreasOfCare() {
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
               From routine eye care to highly specialized surgical treatment,
-              every patient receives personalized, evidence-based care focused
+              every patient receives personalized care focused
               on preserving and restoring vision.
             </p>
           </div>
