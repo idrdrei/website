@@ -54,26 +54,31 @@ export default function OcularOncology() {
             </p>
 
             <ul className="mt-10 space-y-4">
-              {services.map((item) => (
-                <li
-                  key={item.label}
-                  className="flex items-center gap-3 text-slate-200"
-                >
-                  <span className="h-2 w-2 rounded-full bg-[#7FB3FF]" />
+  {services.map((item) => (
+    <li
+      key={item.label}
+      className="flex items-center gap-3 text-slate-200"
+    >
+      <span className="h-2 w-2 rounded-full bg-[#7FB3FF]" />
 
-                  {item.href ? (
-                    <Link
-                      href={item.href}
-                      className="transition-colors duration-300 hover:text-white hover:underline"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span>{item.label}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
+      {item.href ? (
+        <Link
+          href={item.href}
+          className="group inline-flex items-center gap-2 transition-colors duration-300 hover:text-white"
+        >
+          <span>{item.label}</span>
+
+          <ArrowRight
+            size={15}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </Link>
+      ) : (
+        <span>{item.label}</span>
+      )}
+    </li>
+  ))}
+</ul>
 
             <Link
               href="/services/ocular-oncology"
