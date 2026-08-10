@@ -33,11 +33,13 @@ const services = [
 
 export default function AreasOfCare() {
   return (
-    <section id="services" className="bg-[#FAFAF7] py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-8 lg:px-16">
+    <section className="bg-white py-24 sm:py-28 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+        {/* Heading */}
         <FadeIn>
           <div className="max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.35em] text-[#1F4E8C]">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#1F4E8C]">
               Areas of Care
             </p>
 
@@ -47,12 +49,13 @@ export default function AreasOfCare() {
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
               From routine eye care to highly specialized surgical treatment,
-              every patient receives personalized care focused
-              on preserving and restoring vision.
+              every patient receives personalized care focused on preserving
+              and restoring vision.
             </p>
           </div>
         </FadeIn>
 
+        {/* Services */}
         <div className="mt-20 grid gap-8 md:grid-cols-2">
           {services.map((service, index) => (
             <FadeIn key={service.title} delay={index * 0.1}>
@@ -78,6 +81,45 @@ export default function AreasOfCare() {
             </FadeIn>
           ))}
         </div>
+
+        {/* Children's Eye Health Hook */}
+<FadeIn delay={0.45}>
+  <div className="mt-14">
+    <Link
+      href="/education/childrens-eye-health"
+      className="group block rounded-[28px] border border-[#1F4E8C]/15 bg-[#1F4E8C]/[0.04] px-7 py-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#1F4E8C]/30 hover:bg-[#1F4E8C]/[0.07] hover:shadow-lg sm:px-9 sm:py-8"
+    >
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1F4E8C]">
+            For Parents
+          </p>
+
+          <h3 className="mt-3 text-2xl font-medium tracking-tight text-gray-900 sm:text-3xl">
+            Is your child spending too much time on screens?
+          </h3>
+
+          <p className="mt-3 max-w-2xl text-base leading-7 text-gray-600">
+            Learn simple ways to protect your child&apos;s developing vision,
+            recognize warning signs, and build healthier screen habits.
+          </p>
+        </div>
+
+        <div className="flex shrink-0 items-center gap-2 text-sm font-medium text-[#1F4E8C]">
+          <span>Learn more</span>
+
+          <ArrowRight
+            size={18}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </div>
+
+      </div>
+    </Link>
+  </div>
+</FadeIn>
+
       </div>
     </section>
   );
