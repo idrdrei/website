@@ -17,7 +17,7 @@ const cards = [
   {
     title: "Clearer Vision Again",
     description:
-      "Most patients notice clearer vision within a day or two after treatment and can return to normal activities shortly afterward.",
+      "Most patients notice clearer vision within a day or two after treatment and can return to their normal activities shortly afterward.",
   },
 ];
 
@@ -25,8 +25,8 @@ export default function PosteriorCapsularOpacification() {
   return (
     <section
       id="yag-laser"
- className="bg-white py-24">
-
+      className="scroll-mt-28 bg-white py-24"
+    >
       <div className="mx-auto max-w-7xl px-8 lg:px-16">
 
         <FadeIn>
@@ -36,7 +36,7 @@ export default function PosteriorCapsularOpacification() {
             </p>
 
             <h2 className="mt-5 text-4xl font-light tracking-tight text-neutral-900 md:text-5xl">
-              Vision Becoming
+              Vision Getting
               <span className="block font-semibold">
                 Cloudy Again?
               </span>
@@ -44,8 +44,8 @@ export default function PosteriorCapsularOpacification() {
 
             <p className="mt-8 text-lg leading-8 text-neutral-600">
               Some patients notice that their vision becomes blurry months
-              or even years after successful cataract surgery. This
-              <strong> does not mean the cataract has returned.</strong>
+              or even years after successful cataract surgery.
+              <strong> This does not mean the cataract has returned.</strong>
             </p>
           </div>
         </FadeIn>
@@ -74,22 +74,23 @@ export default function PosteriorCapsularOpacification() {
               </h3>
 
               <p className="mt-8 text-lg leading-8 text-neutral-600">
-                During cataract surgery, your cloudy natural lens is
-                removed and replaced with a clear artificial lens
-                (intraocular lens or IOL).
+                During cataract surgery, your cloudy natural lens is removed
+                and replaced with a clear artificial lens called an{" "}
+                <strong>intraocular lens (IOL)</strong>.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-neutral-600">
-                The artificial lens sits inside a thin transparent
-                membrane called the <strong>posterior capsule</strong>.
-                Over time, this capsule may become cloudy, causing blurry
-                vision similar to the original cataract.
+                The artificial lens sits inside a thin transparent membrane
+                called the <strong>posterior capsule</strong>. Over time,
+                this capsule may become cloudy, causing blurry vision that
+                can feel similar to the symptoms of a cataract.
               </p>
 
               <p className="mt-6 text-lg leading-8 text-neutral-600">
-                Fortunately, this common condition can usually be treated
-                with a quick, painless laser procedure called
-                <strong> YAG laser capsulotomy.</strong>
+                Fortunately, this common condition is usually treated with a
+                quick, painless outpatient laser procedure called a{" "}
+                <strong>YAG laser capsulotomy.</strong> Most patients notice
+                clearer vision within one or two days.
               </p>
             </div>
           </FadeIn>
@@ -119,10 +120,11 @@ export default function PosteriorCapsularOpacification() {
             </h3>
 
             <p className="mt-5 text-lg leading-8 text-neutral-700">
-              Posterior capsular opacification is one of the most common
-              long-term changes after cataract surgery. It is a routine
-              part of cataract care and can usually be treated safely with
-              a YAG laser capsulotomy performed in the clinic.
+              Posterior capsular opacification (PCO) is one of the most
+              common long-term changes after cataract surgery. Although not
+              everyone develops it, it is a routine part of cataract care
+              and can usually be treated safely and effectively with a YAG
+              laser capsulotomy performed in the clinic.
             </p>
           </div>
         </FadeIn>
