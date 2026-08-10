@@ -8,6 +8,7 @@ import Symptoms from "@/components/services/cataract-surgery/Symptoms";
 import CataractSurgery from "@/components/services/cataract-surgery/CataractSurgery";
 import RecoveryResult from "@/components/services/cataract-surgery/RecoveryResult";
 import PosteriorCapsularOpacification from "@/components/services/cataract-surgery/PosteriorCapsularOpacification";
+
 import RelatedServices from "@/components/RelatedServices";
 import CallToAction from "@/components/CallToAction";
 
@@ -41,6 +42,8 @@ export default function CataractSurgeryPage() {
       <CataractSurgery />
 
       <RecoveryResult />
+
+      <PosteriorCapsularOpacification />
 
       <RelatedServices
         services={[
