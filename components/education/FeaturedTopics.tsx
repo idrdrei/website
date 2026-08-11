@@ -70,6 +70,19 @@ const topics = [
     icon: Monitor,
     href: "/services/comprehensive-eye-care",
   },
+
+  // RETINA — moved before Eye Tumors
+  {
+    title: "Retina & Macula",
+    description:
+      "Understand diabetic eye disease, retinal detachment, macular degeneration, floaters, and flashes.",
+    hover:
+      "Learn about common retinal and macular conditions, their warning signs, how they are diagnosed, and when treatment may be needed to protect vision.",
+    icon: Eye,
+    href: "/education/retina",
+    badge: "New Guide",
+  },
+
   {
     title: "Eye Tumors",
     description:
@@ -78,16 +91,7 @@ const topics = [
       "Explore patient-friendly information about tumors affecting the eyelids, conjunctiva, orbit, and other structures around the eye, with a focus on early diagnosis and specialized care.",
     icon: ShieldCheck,
   },
-  {
-    title: "Retina & Macula",
-    description:
-      "Understand diabetic eye disease, retinal tears, macular degeneration, floaters, and flashes.",
-    hover:
-      "The retina converts light into signals that allow us to see. Conditions affecting the retina, like diabetic retinopathy, can lead to permanent vision loss if not diagnosed and treated promptly.",
-    icon: Eye,
-  },
 ];
-
 export default function FeaturedTopics() {
   return (
     <section className="bg-white py-24 sm:py-28 lg:py-32">
