@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
 import Navbar from "@/components/home/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -101,8 +103,8 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon-32x32.png",
+    shortcut: "/favicon-32x32.png",
   },
 
   category: "healthcare",
