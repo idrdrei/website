@@ -83,6 +83,20 @@ const topics = [
     badge: "New Guide",
   },
 
+// GLAUCOMA
+  {
+    title: "Glaucoma",
+    description:
+      "Learn about glaucoma, its warning signs, how it is diagnosed, and how treatment can help protect your vision.",
+    hover:
+      "Understand why glaucoma can develop without noticeable symptoms, how eye pressure and the optic nerve are evaluated, and the treatments available to help preserve vision.",
+    icon: ScanEye,
+    href: "/education/glaucoma",
+    badge: "New Guide",
+  },
+  
+  // EYE TUMORS
+
   {
     title: "Eye Tumors",
     description:
@@ -94,7 +108,9 @@ const topics = [
 ];
 export default function FeaturedTopics() {
   return (
-    <section className="bg-white py-24 sm:py-28 lg:py-32">
+    <section
+    id="topics"
+     className="bg-white py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
         {/* Heading */}
