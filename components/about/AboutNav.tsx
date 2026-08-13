@@ -32,25 +32,6 @@ export default function AboutNav() {
     });
   };
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-
-    if (!element) return;
-
-    const offset = 160;
-
-    const y =
-      element.getBoundingClientRect().top +
-      window.scrollY -
-      offset -
-      32;
-
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
     const sections = navItems
       .map((item) => document.getElementById(item.id))
@@ -79,9 +60,8 @@ export default function AboutNav() {
   return (
     <header className="sticky top-20 z-40 border-b border-black/5 bg-[#FAFAF7]/80 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl">
-        {/* Top row */}
-        <div className="flex h-14 items-center justify-between lg:h-20 lg:px-16">
-          <nav className="scrollbar-hide flex flex-1 items-center gap-5 overflow-x-auto px-4 text-xs font-medium sm:text-sm lg:gap-10 lg:px-0">
+        <div className="flex h-14 items-center lg:h-20 lg:px-16">
+          <nav className="scrollbar-hide flex w-full items-center gap-5 overflow-x-auto px-4 text-xs font-medium sm:text-sm lg:gap-10 lg:px-0">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -104,24 +84,6 @@ export default function AboutNav() {
               </button>
             ))}
           </nav>
-
-          {/* Desktop CTA */}
-          <button
-            onClick={scrollToContact}
-            className="hidden rounded-full bg-[#1F4E8C] px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#173d6e] lg:block"
-          >
-            Book Appointment
-          </button>
-        </div>
-
-        {/* Mobile CTA */}
-        <div className="border-t border-black/5 p-4 lg:hidden">
-          <button
-            onClick={scrollToContact}
-            className="w-full rounded-full bg-[#1F4E8C] px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-[#173d6e]"
-          >
-            Book Appointment
-          </button>
         </div>
       </div>
     </header>

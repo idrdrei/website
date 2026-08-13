@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import Highlights from "@/components/home/Highlights";
 import AreasOfCare from "@/components/home/AreasOfCare";
+import EducationCTA from "@/components/EducationCTA";
 import WhyChoose from "@/components/home/WhyChoose";
 import Clinics from "@/components/home/Clinics";
 import Testimonials from "@/components/home/Testimonials";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Highlights />
       <AreasOfCare />
+      <EducationCTA />
       <WhyChoose />
       <Clinics />
       <Testimonials />

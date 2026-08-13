@@ -20,6 +20,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[#FAFAF7]/80 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8 lg:px-16">
+
         {/* Logo */}
         <Link
           href="/"
@@ -29,7 +30,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-10 text-sm md:flex">
+        <nav className="hidden items-center gap-8 text-sm md:flex">
           {navItems.map((item) => {
             const active =
               pathname === item.href ||
@@ -49,14 +50,20 @@ export default function Navbar() {
 
                 <span
                   className={`absolute bottom-0 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#1F4E8C] transition-all duration-500 ${
-                    active
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
+                    active ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
               </Link>
             );
           })}
+
+          {/* Book Now */}
+          <Link
+            href="/book"
+            className="rounded-full bg-[#1F4E8C] px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#173C6D] hover:shadow-md"
+          >
+            Book Now
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -72,10 +79,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          menuOpen ? "max-h-96 border-t border-black/5" : "max-h-0"
+          menuOpen ? "max-h-[500px] border-t border-black/5" : "max-h-0"
         } md:hidden`}
       >
         <nav className="flex flex-col px-8 py-6">
+
           {navItems.map((item) => {
             const active =
               pathname === item.href ||
@@ -96,6 +104,16 @@ export default function Navbar() {
               </Link>
             );
           })}
+
+          {/* Mobile Book Now */}
+          <Link
+            href="/book"
+            onClick={() => setMenuOpen(false)}
+            className="mt-3 rounded-full bg-[#1F4E8C] px-5 py-3.5 text-center text-base font-medium text-white transition hover:bg-[#173C6D]"
+          >
+            Book Now
+          </Link>
+
         </nav>
       </div>
     </header>

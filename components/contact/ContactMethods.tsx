@@ -10,14 +10,14 @@ const methods = [
     description:
       "The fastest way to reach our clinic for appointments and general inquiries.",
     icon: <FaFacebookMessenger size={34} />,
-    href: "https://www.facebook.com/idrdrei",
+    href: "https://m.me/idrdrei",
     button: "Message Us",
     hoverClass: "group-hover:bg-[#0084FF]",
   },
   {
     title: "Viber",
     description:
-      "Contact us for appointment requests and follow-up questions.",
+      "Contact my secretary, LS, for appointment requests and follow-up questions.",
     icon: <FaViber size={34} />,
     href: "viber://chat?number=%2B639058616824",
     button: "Chat on Viber",
