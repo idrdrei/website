@@ -103,9 +103,9 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon-32x32.png",
-    shortcut: "/favicon-32x32.png",
-  },
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+},
 
   category: "healthcare",
 };
